@@ -1,0 +1,287 @@
+[
+  {
+    "class":"com.anritsu.eosearch.shared.Dialogue",
+    "fields":[
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"MSISDN to IMSI",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"ACK with SDP time",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"APN",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring Str",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.accesstype",
+        "value":"false",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.cs-video",
+        "value":"false",
+        "separator":" = "
+      }
+    ],
+    "separator":" | ",
+    "rowIdRef":2
+  },
+
+
+
+  {
+    "class":"com.anritsu.eosearch.shared.Dialogue",
+    "fields":[
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"MSISDN to IMSI",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"ACK with SDP time",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"APN",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring Str",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.accesstype",
+        "value":"false",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.cs-video",
+        "value":"false",
+        "separator":" = "
+      }
+    ],
+    "separator":" | ",
+    "rowIdRef":2
+  },
+
+
+  {
+    "class":"com.anritsu.eosearch.shared.Dialogue",
+    "fields":[
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"MSISDN to IMSI",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"ACK with SDP time",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"APN",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring Str",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.accesstype",
+        "value":"false",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.cs-video",
+        "value":"false",
+        "separator":" = "
+      }
+    ],
+    "separator":" | ",
+    "rowIdRef":2
+  },
+
+
+  {
+    "class":"com.anritsu.eosearch.shared.Dialogue",
+    "fields":[
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"MSISDN to IMSI",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"ACK with SDP time",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"APN",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring Str",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.accesstype",
+        "value":"false",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.cs-video",
+        "value":"false",
+        "separator":" = "
+      }
+    ],
+    "separator":" | ",
+    "rowIdRef":2
+  },
+
+
+  {
+    "class":"com.anritsu.eosearch.shared.Dialogue",
+    "fields":[
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"MSISDN to IMSI",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"ACK with SDP time",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"APN",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring Str",
+        "value":"###",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.accesstype",
+        "value":"false",
+        "separator":" = "
+      },
+      {
+        "class":"com.anritsu.eosearch.shared.DialogueField",
+        "fieldName":"Accept-Contact Substring:+g.3gpp.cs-video",
+        "value":"false",
+        "separator":" = "
+      }
+    ],
+    "separator":" | ",
+    "rowIdRef":2
+  }
+
+]
