@@ -1,0 +1,38 @@
+.result-widget-container {
+  overflow-x: auto;
+  height: auto;
+}
+.result-widget-container .p-panel.p-panel-toggleable .p-panel-header {
+  padding: 0.34rem 1rem !important;
+}
+.result-widget-container .p-panel.p-panel-toggleable .p-toggleable-content {
+  height: calc(100% - 50px);
+}
+.result-widget-container .p-panel.p-panel-toggleable .p-toggleable-content .p-panel-content {
+  height: 100%;
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+
+
+.closable-panel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.closable-panel .p-panel-header {
+  padding: 0.34rem 1rem !important;
+}
+.closable-panel .p-toggleable-content {
+  height: calc(100% - 50px);
+}
+.closable-panel .p-toggleable-content .p-panel-content {
+  height: 100%;
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+.closable-panel .p-panel-content {
+  height: calc(100% - 50px);
+  padding-bottom: 0px;
+  padding-top: 10px;
+}

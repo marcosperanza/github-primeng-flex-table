@@ -1,144 +1,130 @@
-<button pButton label="PrimeNG" (click)="onClick()"></button>
+<div style="height: calc(100vh - 90px);">
 
-<p-panel
-  #panelWrapper
-  [toggleable]="false"
-  class="closable-panel"
->
-  <ng-template pTemplate="header">
-    <div>Flex table</div>
-  </ng-template>
 
-  <ng-template pTemplate="icons">
-    <button pButton class="p-panel-header-icon p-link" (click)="onClose()">
-      <span class="pi pi-minus"></span>
-    </button>
-  </ng-template>
-
-  <p-table
-    styleClass="p-datatable-gridlines"
-    virtualScrollDelay="100"
-    #resultTable
-    [value]="records"
-    [scrollable]="true"
-    [responsive]="true"
-    [virtualScroll]="true"
-    [virtualRowHeight]="'flex'"
-    dataKey="id"
-    [autoLayout]="true"
-    [scrollHeight]="'flex'"
-    [resizableColumns]="true"
-    [alwaysShowPaginator]="true"
-    columnResizeMode="expand"
-    [expandedRowKeys]="expandedRows"
-    tableStyleClass="sticky-table"
-    [showLoader]="true"
-    [paginator]="true"
-    [rows]="pageSize"
-    [showCurrentPageReport]="true"
-    currentPageReportTemplate="{first} - {last} of {totalRecords}"
-    [rowsPerPageOptions]="[10,25,50,100,150,200]"
-    [lazy]="true"
-    (onLazyLoad)="paginate($event)"
-    [totalRecords]="totalRecords"
-    [loading]="loading"
-    [styleClass]="getDensityStyle(densityTable)"
-  >
-    <ng-template pTemplate="colgroup" let-columns>
-      <colgroup>
-        <col
-          *ngFor="let col of tableColumnModel; index as i"
-          [ngStyle]="{'width': i < (this.isTrace ? 2 : 1) ? '40px' : '100px' }"
-        />
-      </colgroup>
-    </ng-template>
-    <ng-template pTemplate="header" let-columns>
-      <tr>
-        <ng-container *ngFor="let col of tableColumnModel">
-          <th pResizableColumn *ngIf="isColumnToShow(col.identifier)">
-            {{ col.name }}
-          </th>
-        </ng-container>
-      </tr>
-    </ng-template>
-    <ng-template
-      pTemplate="body"
-      let-rowData
-      let-expanded="expanded"
-      let-columns
+    <p-table
+      styleClass="p-datatable-gridlines"
+      virtualScrollDelay="100"
+      #resultTable
+      [value]="records"
+      [scrollable]="true"
+      [responsive]="true"
+      [virtualScroll]="true"
+      [virtualRowHeight]="'flex'"
+      dataKey="id"
+      [autoLayout]="true"
+      [scrollHeight]="'flex'"
+      [resizableColumns]="true"
+      [alwaysShowPaginator]="true"
+      columnResizeMode="expand"
+      [expandedRowKeys]="expandedRows"
+      tableStyleClass="sticky-table"
+      [showLoader]="true"
+      [paginator]="true"
+      [rows]="pageSize"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="{first} - {last} of {totalRecords}"
+      [rowsPerPageOptions]="[10,25,50,100,150,200]"
+      [lazy]="true"
+      (onLazyLoad)="paginate($event)"
+      [totalRecords]="totalRecords"
+      [loading]="loading"
+      [styleClass]="getDensityStyle(densityTable)"
     >
-      <tr>
-        <td>
-          <div *ngIf="rowData"></div>
-          <p-checkbox
-            [binary]="true"
-            [ngModel]="isRowSelected(rowData.id)"
-            (ngModelChange)="onRowSelected(rowData.id)"
-          >
-          </p-checkbox>
-        </td>
-        <td *ngIf="isTrace">
-          <button
-            type="button"
-            pButton
-            [pRowToggler]="rowData"
-            class="p-button-text p-button-rounded p-button-plain"
-            [icon]="expanded ? 'fas fa-minus-circle' : 'fas fa-plus-circle'"
-          ></button>
-        </td>
-        <ng-container *ngFor="let col of dataColumnModel; index as i">
-          <td
-            *ngIf="isColumnToShow(col.identifier)"
-            [pContextMenuRow]="{data: rowData, index: i, fieldId: col.identifier, value: rowData.values[i], subIndex: undefined}"
-          >
-            <span>{{getValueForTable(col, rowData, i)}}</span>
-          </td>
-        </ng-container>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="rowexpansion" let-rowValue let-rowIndex>
-      <tr>
-        <td colspan="40">
-          <div class="p-p-3">
-            <p-table
-              [value]="expandedDialogue[rowValue.id]"
-              dataKey="id"
-              responsive="true"
-              [lazy]="true"
-              (onLazyLoad)="onRowExpanded(rowValue)"
-              tableStyleClass="dialogueTable"
+      <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+          <col
+            *ngFor="let col of tableColumnModel; index as i"
+            [ngStyle]="{'width': i < (this.isTrace ? 2 : 1) ? '40px' : '100px' }"
+
+          />
+        </colgroup>
+      </ng-template>
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <ng-container *ngFor="let col of tableColumnModel">
+            <th pResizableColumn *ngIf="isColumnToShow(col.identifier)">
+              {{ col.name }}
+            </th>
+          </ng-container>
+        </tr>
+      </ng-template>
+      <ng-template
+        pTemplate="body"
+        let-rowData
+        let-expanded="expanded"
+        let-columns
+      >
+        <tr>
+          <td>
+            <div *ngIf="rowData"></div>
+            <p-checkbox
+              [binary]="true"
+              [ngModel]="isRowSelected(rowData.id)"
+              (ngModelChange)="onRowSelected(rowData.id)"
             >
-              <ng-template pTemplate="header"> </ng-template>
-              <ng-template pTemplate="body" let-dialogue let-i="rowIndex">
-                <tr>
-                  <td width="50px">
-                    <p-checkbox
-                      [binary]="true"
-                      [ngModel]="isDialogueSelected(i, rowIndex.id)"
-                      (ngModelChange)="onDialogueSelected(i, rowIndex.id)"
-                    >
-                    </p-checkbox>
-                  </td>
-                  <td
-                    *ngFor="let dialogueFields of dialogue.fields; let dIndex = index"
-                    [pContextMenuRow]="{data: dialogue, index: dIndex, fieldId: dialogueFields.fieldName, value: dialogueFields.value, subIndex: i}"
-                  >
-                    {{ dialogueFields.fieldName }} {{ dialogueFields.separator
-                    }} {{ dialogueFields.value }}
-                  </td>
-                </tr>
-              </ng-template>
-              <ng-template>
-                <tr>
-                  <td colspan="6">
-                    There are no order for this product yet.
-                  </td>
-                </tr>
-              </ng-template>
-            </p-table>
-          </div>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-panel>
+            </p-checkbox>
+          </td>
+          <td *ngIf="isTrace">
+            <button
+              type="button"
+              pButton
+              [pRowToggler]="rowData"
+              class="p-button-text p-button-rounded p-button-plain"
+              [icon]="expanded ? 'fas fa-minus-circle' : 'fas fa-plus-circle'"
+            ></button>
+          </td>
+          <ng-container *ngFor="let col of dataColumnModel; index as i">
+            <td
+              *ngIf="isColumnToShow(col.identifier)"
+            >
+              <span>{{getValueForTable(col, rowData, i)}}</span>
+            </td>
+          </ng-container>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="rowexpansion" let-rowValue let-rowIndex>
+        <tr>
+          <td colspan="40">
+            <div class="p-p-3">
+              <p-table
+                [value]="expandedDialogue[rowValue.id]"
+                dataKey="id"
+                responsive="true"
+                [lazy]="true"
+                (onLazyLoad)="onRowExpanded(rowValue)"
+                tableStyleClass="dialogueTable"
+              >
+                <ng-template pTemplate="header"></ng-template>
+                <ng-template pTemplate="body" let-dialogue let-i="rowIndex">
+        <tr>
+          <td width="50px">
+            <p-checkbox
+              [binary]="true"
+              [ngModel]="isDialogueSelected(i, rowIndex.id)"
+              (ngModelChange)="onDialogueSelected(i, rowIndex.id)"
+            >
+            </p-checkbox>
+          </td>
+          <td
+            *ngFor="let dialogueFields of dialogue.fields; let dIndex = index"
+            [pContextMenuRow]="{data: dialogue, index: dIndex, fieldId: dialogueFields.fieldName, value: dialogueFields.value, subIndex: i}"
+          >
+            {{ dialogueFields.fieldName }} {{ dialogueFields.separator
+            }} {{ dialogueFields.value }}
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template>
+        <tr>
+          <td colspan="6">
+            There are no order for this product yet.
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+</div>
+</td>
+</tr>
+</ng-template>
+</p-table>
+</div>

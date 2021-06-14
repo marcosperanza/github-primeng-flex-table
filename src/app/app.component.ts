@@ -15,7 +15,7 @@ export interface Color {
   b?: number;
   g?: number;
   r?: number;
-  
+
 }
 
 export interface Annotation {
@@ -121,9 +121,9 @@ export class AppComponent implements OnInit {
   densityTable: 'LOW' | 'NORMAL' | 'HIGH' = 'LOW';
   isTrace: false;
 
-  records: OutputRecord[];
-  tableColumnModel: ColumnModel[];
-  dataColumnModel: ColumnModel[];
+  records: OutputRecord[] = [];
+  tableColumnModel: ColumnModel[] = [];
+  dataColumnModel: ColumnModel[] = [];
 
 
   constructor(private http: HttpClient) {}
@@ -137,6 +137,7 @@ export class AppComponent implements OnInit {
       .get<ColumnModel[]>('assets/data/records-column-model.json')
       .subscribe(value => {
         this.tableColumnModel = value;
+        this.dataColumnModel = value;
       });
   }
 
@@ -178,7 +179,7 @@ export class AppComponent implements OnInit {
   }
 
   isColumnToShow(id: string): boolean {
-    return true;  
+    return true;
   }
 
   isRowSelected(id: number): boolean {
@@ -199,9 +200,9 @@ export class AppComponent implements OnInit {
     return false;
   }
    onDialogueSelected(dialogueIndex: number, outputRecordId: number) {
-  
+
   }
-  
+
   getValueForTable(col: ColumnModel, rowData: any, i: number) {
     if (col.fieldType === 'AbsoluteTimeType') {
       const datePipe: DatePipe = new DatePipe('en');
